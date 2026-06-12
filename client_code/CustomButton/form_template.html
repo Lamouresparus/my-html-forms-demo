@@ -6,6 +6,20 @@ properties:
   important: true
   name: text
   type: string
+- default_value: false
+  designer_hint: font-bold
+  important: true
+  name: bold
+  type: boolean
+- default_value: left
+  important: true
+  name: align
+  options:
+  - left
+  - right
+  - center
+  - justify
+  type: enum
 ---
 <button class="custom-button" anvil:dom-node="custom-button">
   ✅ <span anvil:dom-node="custom-button-text">Click me</span>

@@ -8,6 +8,10 @@ class CustomButton(CustomButtonTemplate):
     super().__init__(**properties)
     print(self.dom_nodes)
     # Any code you write here will run before the form opens.
+    self.dom_nodes['custom-button'].addEventListener('click', self._handle_click)
+
+  def _handle_click(self, event):
+    self.raise_event('click')
 
   @property
   def text(self):
@@ -29,3 +33,7 @@ class CustomButton(CustomButtonTemplate):
       self.dom_nodes['custom-button-text'].style.fontWeight = "bold"
     else:
       self.dom_nodes['custom-button-text'].style.fontWeight = "normal" 
+
+  @property
+  def align(self):
+    return self._align
