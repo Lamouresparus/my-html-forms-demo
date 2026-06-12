@@ -1,5 +1,9 @@
 ---
 custom_component: true
+custom_component_container: true
+events:
+- default_event: true
+  name: click
 properties:
 - default_binding_prop: true
   default_value: Button
@@ -11,16 +15,10 @@ properties:
   important: true
   name: bold
   type: boolean
-- default_value: left
-  important: true
-  name: align
-  options:
-  - left
-  - right
-  - center
-  - justify
-  type: enum
 ---
 <button class="custom-button" anvil:dom-node="custom-button">
   ✅ <span anvil:dom-node="custom-button-text">Click me</span>
+  <anvil-component type="Label" name="label_1" prop:text="Hola
+"></anvil-component>
+  <anvil-slot name="slot_1"></anvil-slot>
 </button>
