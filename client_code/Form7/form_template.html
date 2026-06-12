@@ -1,0 +1,8 @@
+<anvil-form container="HtmlTemplate" prop:html='<center style="font-style:italic; color:#888; margin: 3em;">
+  (Insert your custom HTML here)
+</center>
+<div anvil-slot="title">
+  <div anvil-if-slot-empty="title">Drop a title here!</div>
+</div>'>
+  <anvil-slot name="slot_1" container:slot="title"></anvil-slot>
+</anvil-form>

@@ -1,0 +1,21 @@
+<center style="font-style:italic; color:#888; margin: 3em;">
+  <h2>Welcome to my app!</h2>
+  <anvil-slot name="slot_1"></anvil-slot>
+  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="A waving hand" />
+</center>
+<anvil-slot name="slot_2"></anvil-slot>
+
+<div anvil-slot-repeat="default" style="border: 2px solid pink">
+</div>
+
+<!-- The first div will only be visible while editing the Form in the designer -->
+<div class="anvil-designer-only" style="color: gray; font-style: italic;">
+  Drop components below
+</div>
+<div anvil-slot="default" style="border: 2px solid lightblue; padding: 5px">
+  <anvil-slot name="slot_3"></anvil-slot>
+</div>
+<div anvil-slot="title">
+  <div anvil-if-slot-empty="title">Drop a title here!</div>
+</div>
+<anvil-slot name="slot_4"></anvil-slot>
