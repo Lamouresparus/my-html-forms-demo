@@ -6,4 +6,6 @@ class Form14(Form14Template):
     # Set Form properties and Data Bindings.
     super().__init__(**properties)
 
+    html = HtmlComponent()
+
     # Any code you write here will run before the form opens.
